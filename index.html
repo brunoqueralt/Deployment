@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Agustina Descalzo, Mariel Margaride, Tais Marambio, Reinaldo Donelly y Bruno Queralt" />
+
+
+<title>Cardiology Report</title>
+
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Cardiology Report</h1>
+<h4 class="author">Agustina Descalzo, Mariel Margaride, Tais Marambio, Reinaldo Donelly y Bruno Queralt</h4>
+<h4 class="date">1/7/2021</h4>
+
+</div>
+
+
+<p><br /> <br /></p>
+<p>Austral Hospital’s Cardiology department has asked for a tool that would be able to predict the procedure prescribed to a patient based on their medical history. To do this, we have been given access to their dataset, which initially consisted of 706 cardiology patients. However, emergency procedures cannot be predicted, so they were all removed from the dataset and it was narrowed down to 385. In order to develop an accurate model for our predictor, we needed to understand what variables in our dataset were significant factors. First a preliminary study was undertaken, with a bibliography that can be found down below, consisting of medical journals and papers. Then, before building the predictor, we analyzed some of the variables we had concluded would carry weight when it came to deciding what procedure would be done.</p>
+<div id="most-common-intervention-by-gender" class="section level1" align="center">
+<h1><strong>Most common intervention by gender</strong></h1>
+</div>
+<p>Understanding what procedures are most common is essential for any analysis. This is especially the case when the end goal is to create a model that predicts the procedure needed given a patient’s medical report.</p>
+<p>We first analyzed the percentage of patients that had undergone each procedure, according to gender.</p>
+<p>From these tables, it is evident that surgery is the most common procedure for women: 60% of all women had to have surgery, while only 38% men. For men,the most common procedure was angioplasty, with 61% having undergone it.</p>
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /><img src="index_files/figure-html/unnamed-chunk-2-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><br /> <br /> <br /> <br /> <br /></p>
+<div id="age-distribution" class="section level1" align="center">
+<h1><strong>Age distribution</strong></h1>
+</div>
+<p>In order to study how age would impact the procedure performed on patients, we first plotted the age distribution to get a general idea of how our population is distributed.</p>
+<p>The following density plot shows us that the majority of people in our sample are between 50 and 80 years old.</p>
+<p>This shows us that there is a tendency towards older patients in regards to cardiovascular issues.</p>
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><br /> <br /> <br /> <br /> <br /></p>
+<div id="procedure-distribution-by-age" class="section level1" align="center">
+<h1><strong>Procedure distribution by age</strong></h1>
+</div>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The density graph shows that both surgery and angioplasty behave with a relatively normal distribution, with the majority of procedures concentrated around ages 50-75, which is consistent with the overall age distribution of our sample. However, TAVI is performed only on patients older then 60, with most patients of 75+ years of age.</p>
+<p>This suggests that age is a determining factor in the decision on what procedure to perform on a patient.</p>
+<p>It is also key to note that out of the two most common procedures, angioplasty and surgery, angioplasty is preferred when the patient is older. This ties in with the greater risks involved in the more invasive open surgery.</p>
+<p><br /> <br /> <br /> <br /> <br /></p>
+<div id="procedure-distribution-by-age-in-women" class="section level1" align="center">
+<h1><strong>Procedure distribution by age in women</strong></h1>
+</div>
+<p>Since women had different complications than men, we decided to go one step forward and analyze the procedure distribution by age in women.</p>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>According to the Argentine Society of Arterial Hypertension, arterial hypertension affects between 25-30% of the women in Argentina and  this amount  increases with age as we can see in the density graph especially after menopause with almost approaching 80% of women older than 70 years. Menopause causes an increment in the arterial pressure due to the changes of the hormones during this period. The higher arterial pressure can end up as an arterial hypertension that would need to be treated.</p>
+<p>That explains this density graph where we can see that TAVI is performed on an even older fraction of women and angioplasty is preferred over surgery in older patients because there is a higher density of all types of procedures performed on women after the age of 50. Which is linked to the greater risk of cardiovascular disease in post-menopausal women.</p>
+<p><em>D.M.S., &amp; D.J.Z. (2010). Hipertensión en la Mujer. Sociedad Argentina de Hipertensión Arterial. Published.</em></p>
+<p><br /> <br /> <br /> <br /> <br /></p>
+<div id="most-common-previous-intervention-by-gender" class="section level1" align="center">
+<h1><strong>Most common previous intervention by gender</strong></h1>
+</div>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /><img src="index_files/figure-html/unnamed-chunk-6-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The majority of our sample had not undergone a previous intervention.</p>
+<p>In the case of our male patients, it is relevant to point out that the most common previous intervention was angioplasty, which might indicate a possible correlation with angioplasty being the most common procedure performed on men. The idea that a previous angioplasty would lead to a decision to perform another angioplasty instead of surgery would be interesting to explore further.</p>
+<p>On the other hand, we can observe that the amount of patients with no previous intervention is bigger in women than in men. An explanation could be that men tend to have a higher tendency to have heart diseases than women because of their higher proportion of  risk factors such as smoking, hypertension, diabetes, etc. For example, men have a higher hypertension than pre-menopausal women which can end up as a cardiovascular disease.   </p>
+<p><br /> <br /> <br /> <br /> <br /></p>
+<div id="most-common-procedure-among-diabetic-patients" class="section level1" align="center">
+<h1><strong>Most common procedure among diabetic patients</strong></h1>
+</div>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>A close link exists between diabetes and cardiovascular disease . This disease is the most prevalent cause of mortality and morbidity in diabetic populations. Cardiovascular disease death rates in the United States are 1.7 times higher among adults (&gt; 18 years) with diabetes than those without diagnosed with diabetes, largely due to an increased risk of stroke and myocardial infarction. This is due to a high blood glucose from diabetes, which can damage your blood vessels and the nerves that control your heart and blood vessels. Over time, this damage can lead to heart disease. Some of the most known factors regarding complications are hypertension, dyslipidemia, diabetic cardiomyopathy, cardiovascular autonomic neuropathy or myocardial infarction, among many others. This increased risk of cardiovascular disease mortality in diabetic patients is found in both men and women. The relative risk for cardiovascular disease morbidity and mortality in adults with diabetes ranges from 1 to 3 in men and from 2 to 5 in women compared to those without diabetes. </p>
+<p>Patients with diabetes have an increased risk of coronary artery disease, and are at an increased risk of mortality and morbidity with coronary revascularization procedures. This is due to various modifications associated with diabetes such as endothelial dysfunction (an abnormal response of the cells of the vascular wall), and a greater risk of thrombotic events. It was believed that surgery was the best treatment for this type of patients, but a recent study shows the opposite, which supports the results in the pie chart presented in this section. The death rate of diabetic patients treated by angioplasty (65.5%) was significantly lower regarding the revascularization method, which can have an impact on survival, than that of patients treated by surgery (80.6%).</p>
+<p> The development and widespread use of stents and glycoprotein IIb/IIIa receptor inhibiting drugs have improved the clinical evolution of diabetics treated with angioplasty. New angioplasty techniques, such as brachytherapy and drug-eluting stents, are likely to significantly improve the results of percutaneous interventions in diabetics, thus allowing the indications for angioplasty in diabetics to be extended even further in the near future.</p>
+<p><em>Wild S, Roglic G, Green A, Sicree R, King H. Global prevalence of diabetes: estimates for the year 2000 and projections for 2030. Diabetes Care. 2004.</em></p>
+<p><em>Aguirre F, Brown A, Cho NH, Dahlquist G, Dodd S, Dunning T, Hirst M, Hwang C, Magliano D, Patterson C. IDF Diabetes Atlas. 2013.</em></p>
+<p><em>American Diabetes Association. Economic costs of diabetes in the U.S. In 2007. Diabetes Care</em></p>
+<p><br /> <br /> <br /> <br /> <br /></p>
+<div id="immediate-complications-in-women-by-age" class="section level1" align="center">
+<h1><strong>Immediate complications in women by age</strong></h1>
+</div>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p>83% of the women that presented complications were over 50 years old. This supports the previous observations that post-menopausal women present a higher risk of developing heart problems.</p>
+<p>In this graph we can clearly see that women above 50 years old tend to have more immediate complications. One of the primary reasons is, which is explained in the Procedure Distribution by Age in Women, that these women are post-menopausal which increases the risk of having a cardiovascular disease due to their higher arterial pressure.</p>
+<p><br /> <br /> <br /> <br /> <br /></p>
+<div id="relation-between-number-of-damaged-vessels-and-procedure" class="section level1" align="center">
+<h1><strong>Relation between number of damaged vessels and procedure</strong></h1>
+</div>
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /><img src="index_files/figure-html/unnamed-chunk-9-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The amount of damaged vessels is related with the hypertency of the patient. A study made in Colombia shows that the more damaged vessels the doctor found on the patient, the more complicated the procedure could become and will have a higher risk of becoming an unsuccessful procedure. Therefore, as long as the damaged vessels increased the most common procedure would be a surgery because it’s survival rate is higher than an angioplasty. On the other hand, the study also proves that patients with 1 or 2 damaged vessels have a higher survival rate if the procedure used is an angioplasty because it’s not as invasive as a surgery.</p>
+<p>The article´s information supports the graph shown, which leads us to reaffirm the idea that angioplasty is the most common procedure regarding one or two damaged vessels.</p>
+<p><em>Fernandez, A., Restrepo, R., Villa, P., Garces, J., &amp; Montero, G. (2009). Coronary angioplasty with stenting vs. coronary bypass revascularization surgery in multivessel disease. Revista Colombiana de Cardiologia. Published.</em></p>
+<p><br /> <br /> <br /> <br /> <br /></p>
+<div id="probability-of-a-successful-angioplasty-in-a-patient-with-total-chronic-occlusion" class="section level1" align="center">
+<h1><strong>Probability of a successful angioplasty in a patient with total chronic occlusion</strong></h1>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Successful angioplasty</th>
+<th align="center">Unsuccessful angioplasty</th>
+<th align="center">No angioplasty</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">50%</td>
+<td align="center">9.38%</td>
+<td align="center">40.62%</td>
+</tr>
+</tbody>
+</table>
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>As shown in the previous information, there is a standard idea that angioplasty is the most common procedure among patients with damaged vessels. This is why we decided to evaluate the success of an angioplasty in patients with total chronic occlusion. But first of all, let us define what is a total chronic occlusion. Coronary chronic total occlusions are commonly encountered complex lesions identified in 15% of all patients referred for coronary angiography. Chronic total occlusions are typically characterized by thrombolysis in myocardial infarction with 0 flow for at least 3 months.</p>
+<p>When it comes to percutaneous coronary intervention (angioplasty), there are several complications linked to it. Maybe this is the reason why some professionals choose not to perform it, as shown in the table that 40% of the procedures do not follow angioplasty as their main action. Nevertheless, The field of coronary interventions has advanced tremendously in the last 2 decades and is particularly evident with regard to chronic total occlusion in percutaneous coronary intervention. There are vast improvements in the procedure’s safety and initial success as well as a better understanding of its benefits and patient suitability. It has been described that the procedure offers symptomatic benefits and improves quality of life for patients. The significant improvement in coronary percutaneous coronary intervention success rates is due to a variety of reasons, with the most important being technological advances. Wire designs with higher crossing power lead to higher success rates. Polymer-jacketed wires are used in most cases, including the most successfully crossed cases. Crossing catheters are designed to advance in intimal and subintimal spaces, allowing for subsequent exchange to support wires and, eventually, low-profile balloons. There are primarily four techniques for angioplasty, including antegrade wire escalation, antegrade dissection and reentry, retrograde wire escalation, and retrograde dissection and reentry.</p>
+<p>In conclusion, all of this evidence funds the information shown in the graph, which exhibits that angioplasty is a successful procedure for patients with total chronic occlusion. Success rates depend not only on operator experience but also on anatomical features. Length, calcification, tortuosity, and an ambiguous cap are features that will affect initial success rates.</p>
+<p><em>Christofferson RD, Lehmann KG, Martin GV, Every N, Caldwell JH, Kapadia SR.. Effect of chronic total coronary occlusion on treatment strategy. Am J Cardiol. 2005. May</em></p>
+<p><em>Park SJ. Optimal medical therapy with or without stenting for coronary chronic total occlusion: DECISION CTO. Paper presented at: ACC 2017: 66th Annual Scientific Session 2017 Mar 18; Washington, D.C.</em></p>
+<p><br /> <br /> <br /> <br /> <br /></p>
+<div id="predictor" class="section level1" align="center">
+<h1><strong>Predictor</strong></h1>
+</div>
+<p>Our objective is to be able to predict the procedure prescribed to a patient based on some of the patient’s medical profile. First we selected some of the variables we had previously worked with in our analysis of the dataset. We had concluded that the sex and age of our patients, whether the patient suffered from diabetes, and the number of dammaged heart vessels, were some of the most important factors when it came to deciding between angioplasty or surgery as the best suited cardiological intervention.</p>
+<p>We decided to use a RandomForest as our model for the predictor, because most of the variables we were treating were categorical instead of continuous. Therefore, we set procedure as our dependent variable, and sex, age, diabetic, and number of damaged vessels as our independent variables.</p>
+<p>To apply RandomForest, we needed to factorize all of our variables and make sure there were no NA values. We also split our dataset 80:20: using 80% of the dataset to build our model on. With our model, we predicted the procedures chosen for the remaining 20% of the dataset, based on the independent variables previously mentioned. We then compared the predictions with the real values. The following confusion matrix summarizes our results:</p>
+<table style="width:99%;">
+<colgroup>
+<col width="33%" />
+<col width="31%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">PREDICTED</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>ACTUAL</strong></td>
+<td align="center">Angioplasty</td>
+<td align="center">Surgery</td>
+</tr>
+<tr class="even">
+<td align="center">Angioplasty</td>
+<td align="center">40</td>
+<td align="center">3</td>
+</tr>
+<tr class="odd">
+<td align="center">Surgery</td>
+<td align="center">3</td>
+<td align="center">30</td>
+</tr>
+</tbody>
+</table>
+<p>We can conclude from these results that our model for predicting the procedure done on a cardiology patient has a high level of accuracy: 92.11% of our test sample was predicted accurately.</p>
+<p>In order to further measure our model’s performance, we used the following AUROC curve:</p>
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<table style="width:96%;">
+<colgroup>
+<col width="87%" />
+<col width="8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Variable Importance</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Number of damaged vessels</td>
+<td>8 1.5</td>
+</tr>
+<tr class="even">
+<td align="center">Gender</td>
+<td>4.3</td>
+</tr>
+<tr class="odd">
+<td align="center">Age</td>
+<td>4.1</td>
+</tr>
+<tr class="even">
+<td align="center">Diabetes</td>
+<td>3.1</td>
+</tr>
+</tbody>
+</table>
+<p><img src="Imagen3.png" width="800" /></p>
+<p>Our AUC value (area under the curve) is 0.920, which confirms that our model has a good measure of separability. This means that our model is good at distinguishing between patients that would undergo angioplasty and those that would undergo surgery.</p>
+<p>Delving deeper into our model, we wanted to analyze the net impact that each variable had in predicting the procedure done on a patient. From the table below, we can conclude quite clearly that the most significant factor by far is the number of damaged vessels the patient has. From our previous analysis we had surmised that the number of damaged vessels is indeed an important factor, but we had also seen evidence for sex, age, and diabetes. These results seem to suggest that although they are relevant, the number of damaged vessels is in the end the most determining factor.</p>
+<p>To conclude, our model can predict, with 92% accuracy, the type of procedure a cardiology patient would undergo given their sex, age, diabetic history and the number of damaged vessels. However, it is important to point out that these results are based on a relatively small sample, and further studies would have to be made to reach any conclusions.</p>
+<div id="bibliography" class="section level1" align="center">
+<h1><strong>Bibliography</strong></h1>
+</div>
+<p><em>Christofferson RD, Lehmann KG, Martin GV, Every N, Caldwell JH, Kapadia SR.. Effect of chronic total coronary occlusion on treatment strategy. Am J Cardiol. 2005. May</em></p>
+<p><em>Park SJ. Optimal medical therapy with or without stenting for coronary chronic total occlusion: DECISION CTO. Paper presented at: ACC 2017: 66th Annual Scientific Session 2017 Mar 18; Washington, D.C.</em></p>
+<p><em>Fernandez, A., Restrepo, R., Villa, P., Garces, J., &amp; Montero, G. (2009). Coronary angioplasty with stenting vs. coronary bypass revascularization surgery in multivessel disease. Revista Colombiana de Cardiologia. Published</em></p>
+<p><em>Wild S, Roglic G, Green A, Sicree R, King H. Global prevalence of diabetes: estimates for the year 2000 and projections for 2030. Diabetes Care. 2004.</em></p>
+<p><em>Aguirre F, Brown A, Cho NH, Dahlquist G, Dodd S, Dunning T, Hirst M, Hwang C, Magliano D, Patterson C. IDF Diabetes Atlas. 2013.</em></p>
+<p><em>American Diabetes Association. Economic costs of diabetes in the U.S. In 2007. Diabetes Care</em></p>
+<p><em>D.M.S., &amp; D.J.Z. (2010). Hipertensión en la Mujer. Sociedad Argentina de Hipertensión Arterial. Published.</em></p>
+<p><em><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5880561/#i1947-6094-14-1-50-b4" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5880561/#i1947-6094-14-1-50-b4</a></em></p>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
